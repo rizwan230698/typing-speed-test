@@ -1,0 +1,42 @@
+.preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 80vh;
+  width: 70%;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.preview__action-btn {
+  width: 90%;
+  padding: 20px 0;
+  border-bottom: 1px solid #777;
+}
+.preview__action-btn > * {
+  cursor: pointer;
+  padding: 0px 10px;
+}
+.preview__main small {
+  color: #343a40;
+}
+.preview__quote {
+  height: 80px;
+  background-color: #343a40;
+  margin: 25px 0;
+}
+.preview__output {
+  margin: 0 auto;
+  width: 80%;
+  height: 100px;
+  background-color: #222222;
+}
+
+@media screen and (max-width: 800px) {
+  .preview {
+    position: relative;
+  }
+}

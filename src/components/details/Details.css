@@ -1,0 +1,26 @@
+.details {
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  text-align: center;
+}
+.details__left,
+.details__right {
+  width: 15%;
+}
+.detail {
+  padding: 15px 10px;
+}
+.detail span {
+  padding: 5px 0px;
+  border-bottom: 1px solid #333;
+  font-size: 32px;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 800px) {
+  .details {
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
