@@ -14,25 +14,80 @@
 .preview__action-btn {
   width: 90%;
   padding: 20px 0;
-  border-bottom: 1px solid #777;
+  border-bottom: 1px solid #e5e5e5;
 }
 .preview__action-btn > * {
   cursor: pointer;
-  padding: 0px 10px;
+  margin: 4px;
+  transition: all 0.3s;
+}
+.preview__action-btn > *:hover {
+  transform: translateY(-2px) scale(1.05);
 }
 .preview__main small {
   color: #343a40;
 }
 .preview__quote {
-  height: 80px;
+  line-height: 2;
+  text-align: initial;
+  overflow: hidden;
+  height: 70px;
+  width: 800px;
   background-color: #343a40;
-  margin: 25px 0;
+  color: white;
+  font-size: 30px;
+  margin: 25px auto;
+  padding: 10px 0 0 10px;
+  word-spacing: 12px;
+  white-space: pre;
+  position: relative;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
+.preview__quote--active::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 12px;
+  position: absolute;
+  bottom: 12px;
+  left: 10px;
+  animation: animate 0.3s linear infinite alternate;
+  background-color: red;
+}
+.preview__quote--active::after {
+  content: "Case Senitive";
+  display: block;
+  font-size: 11px;
+  height: 15px;
+  line-height: initial;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: black;
+  word-spacing: initial;
+}
+
 .preview__output {
+  padding: 15px;
+  text-align: initial;
   margin: 0 auto;
   width: 80%;
   height: 100px;
-  background-color: #222222;
+  background-color: #222;
+  color: #fff;
+  white-space: pre-wrap;
+}
+span.error {
+  color: red !important;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 800px) {

@@ -1,20 +1,27 @@
 import React from "react";
 import "./Details.css";
 const Details = props => {
+  let totalWords;
+  if (props.quote.content) {
+    const {
+      quote: { content }
+    } = props;
+    totalWords = content.split(" ").length;
+  }
   return (
     <div className="details">
       <div className="details__left">
         <div className="detail">
           <p>Total Words</p>
-          <span>0</span>
+          <span>{totalWords || 0}</span>
         </div>
         <div className="detail">
           <p>Written Words</p>
-          <span>0</span>
+          <span>{props.writtenWords}</span>
         </div>
         <div className="detail">
           <p>Errors</p>
-          <span>0</span>
+          <span>{props.errors}</span>
         </div>
         <div className="detail">
           <p>Accuracy</p>

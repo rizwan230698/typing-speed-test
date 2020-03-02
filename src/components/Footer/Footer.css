@@ -9,10 +9,13 @@
   width: 100%;
   padding: 10px 0px;
 }
+h4 {
+  margin-bottom: 8px;
+}
 .footer__tips {
   width: 70%;
   padding-bottom: 25px;
-  border-bottom: 1px solid #777;
+  border-bottom: 1px solid #e5e5e5;
 }
 li:not(:last-child) {
   margin-bottom: 8px;
@@ -26,7 +29,7 @@ li:not(:last-child) {
   font-size: 12px;
   margin-bottom: 20px;
   padding-bottom: 25px;
-  border-bottom: 1px solid #777;
+  border-bottom: 1px solid #e5e5e5;
 }
 .measure > * {
   padding: 5px 0;
